@@ -11,7 +11,7 @@ class ExampleTest extends TestCase
         $this->get('/')->assertOk()->assertSee('Lote hace lo demás.');
         $this->get('/privacidad')->assertOk()->assertSee('drive.file')->assertSee('uso limitado');
         $this->get('/terminos')->assertOk()->assertSee('Términos de uso');
-        $this->get('/soporte')->assertOk()->assertSee('wa.me/528117425048', false)->assertSee('contacto@applote.com');
+        $this->get('/soporte')->assertOk()->assertSee('wa.me/528117425048', false)->assertSee('jorge.dzul.escobar@gmail.com');
     }
 
     public function test_trailing_slash_links_still_work(): void
