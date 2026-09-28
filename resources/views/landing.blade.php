@@ -4,7 +4,7 @@
     <a href="#como-funciona">Cómo funciona</a>
     <a href="#privacidad">Privacidad</a>
     <a href="#preguntas">Preguntas</a>
-    <a class="button dark small" href="mailto:{{ $email }}?subject=Quiero%20probar%20Lote">Pedir acceso</a>
+    <a class="button dark small" href="{{ $whatsapp }}" target="_blank" rel="noopener">Pedir acceso</a>
 @endsection
 
 @section('content')
@@ -16,7 +16,7 @@
           <h1>Graba tus videos. <em>Lote hace lo demás.</em></h1>
           <p class="lead">Subtítulos, título, descripción y la fecha de cada publicación. Tú eliges los videos; Lote los deja programados en Instagram, TikTok y YouTube.</p>
           <div class="actions">
-            <a class="button primary" href="mailto:{{ $email }}?subject=Quiero%20probar%20Lote">Quiero probar Lote</a>
+            <a class="button primary" href="{{ $whatsapp }}" target="_blank" rel="noopener">Quiero probar Lote</a>
             <a class="button secondary" href="#como-funciona">Ver cómo funciona</a>
           </div>
           <p class="note">Los videos se procesan en tu dispositivo. Sin servidores de por medio.</p>
@@ -131,7 +131,7 @@
           <details><summary>¿Tengo que usar Metricool?</summary><p>No. Con el modo "Solo procesar", Lote te deja los videos listos, con su título y descripción, para que los publiques como quieras.</p></details>
           <details><summary>¿Publica algo sin que yo lo vea?</summary><p>No. Primero ves el plan completo, lo puedes simular sin mandar nada, y solo programa cuando tú lo confirmas.</p></details>
           <details><summary>¿La IA de Apple cuesta?</summary><p>No. Corre en tu propio dispositivo, sin costo extra. Si prefieres OpenAI, usas tu propia clave y pagas directo lo que uses.</p></details>
-          <details><summary>¿Cómo pruebo la beta?</summary><p>Escríbenos a <a href="mailto:{{ $email }}?subject=Quiero%20probar%20Lote">{{ $email }}</a> y te mandamos la invitación de TestFlight.</p></details>
+          <details><summary>¿Cómo pruebo la beta?</summary><p>Escríbenos por <a href="{{ $whatsapp }}" target="_blank" rel="noopener">WhatsApp</a> y te mandamos la invitación de TestFlight.</p></details>
         </div>
       </div>
     </section>
@@ -142,7 +142,7 @@
           <img src="{{ asset('img/icono.png') }}" alt="">
           <h2>Tu próximo lote, listo en una tarde.</h2>
           <p>Graba cuando tengas ganas. Programa todo de una vez.</p>
-          <a class="button primary" href="mailto:{{ $email }}?subject=Quiero%20probar%20Lote">Pedir acceso a la beta</a>
+          <a class="button primary" href="{{ $whatsapp }}" target="_blank" rel="noopener">Pedir acceso a la beta</a>
         </div>
       </div>
     </section>

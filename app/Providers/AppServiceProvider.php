@@ -21,6 +21,9 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         // The contact address appears on every page.
-        View::composer('*', fn ($view) => $view->with('email', config('landing.email')));
+        View::composer('*', fn ($view) => $view->with([
+            'email' => config('landing.email'),
+            'whatsapp' => 'https://wa.me/'.config('landing.whatsapp').'?text='.rawurlencode(config('landing.whatsapp_message')),
+        ]));
     }
 }

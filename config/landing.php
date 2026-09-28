@@ -8,6 +8,11 @@ return [
     // Shown on every page and used for "Pedir acceso".
     'email' => env('LANDING_EMAIL', 'contacto@applote.com'),
 
+    // "Quiero probar Lote" / "Pedir acceso" open a WhatsApp chat with this
+    // number (country code included, digits only) and a message ready to send.
+    'whatsapp' => env('LANDING_WHATSAPP', '528117425048'),
+    'whatsapp_message' => 'Hola, quiero probar Lote.',
+
     // Date shown on the privacy notice and the terms.
     'legal_updated' => '28 de septiembre de 2026',
 ];

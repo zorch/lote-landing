@@ -31,4 +31,11 @@ class ExampleTest extends TestCase
         config(['landing.email' => 'hola@applote.com']);
         $this->get('/')->assertSee('mailto:hola@applote.com', false);
     }
+
+    public function test_access_buttons_open_whatsapp(): void
+    {
+        $this->get('/')
+            ->assertSee('https://wa.me/528117425048?text=Hola%2C%20quiero%20probar%20Lote.', false)
+            ->assertDontSee('subject=Quiero', false);
+    }
 }
