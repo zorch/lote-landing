@@ -4,6 +4,7 @@
     <a href="#como-funciona">Cómo funciona</a>
     <a href="#privacidad">Privacidad</a>
     <a href="#preguntas">Preguntas</a>
+    <a href="{{ route('support') }}">Soporte</a>
     <a class="button dark small" href="{{ $whatsapp }}" target="_blank" rel="noopener">Pedir acceso</a>
 @endsection
 

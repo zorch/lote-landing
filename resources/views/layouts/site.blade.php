@@ -32,6 +32,7 @@
             <nav>
                 @section('nav')
                     <a href="{{ route('home') }}">Inicio</a>
+                    <a href="{{ route('support') }}">Soporte</a>
                     <a href="{{ route('privacy') }}">Privacidad</a>
                     <a href="{{ route('terms') }}">Términos</a>
                 @show
@@ -45,6 +46,7 @@
         <div class="wrap">
             <span>© {{ date('Y') }} Lote</span>
             <nav>
+                <a href="{{ route('support') }}">Soporte</a>
                 <a href="{{ route('privacy') }}">Privacidad</a>
                 <a href="{{ route('terms') }}">Términos</a>
                 <a href="mailto:{{ $email }}">{{ $email }}</a>
