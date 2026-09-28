@@ -20,14 +20,19 @@
             <a class="button secondary" href="#como-funciona">Ver cómo funciona</a>
           </div>
           <p class="note">Los videos se procesan en tu dispositivo. Sin servidores de por medio.</p>
+          <p class="byline">Creado por un creador, para creadores: <a href="https://www.instagram.com/heeydzul/" target="_blank" rel="noopener">@heeydzul</a></p>
         </div>
 
         <div class="phone-stage" style="position:relative">
-          <div class="phone" aria-hidden="true">
+          <div class="phone" role="img" aria-label="Video vertical de @heeydzul con subtítulos hechos con Lote">
             <div class="screen">
               <div class="island"></div>
               <div class="badges"><span>Reel</span><span>0:42</span></div>
               <div class="caption" id="caption"></div>
+              <a class="creator" href="https://www.instagram.com/heeydzul/" target="_blank" rel="noopener">
+                <img src="{{ asset('img/creador.jpg') }}" alt="">
+                <span>@heeydzul<small>Hecho con Lote</small></span>
+              </a>
             </div>
           </div>
           <div class="float one"><b>Silencio del inicio</b>quitado · 1.8 s</div>

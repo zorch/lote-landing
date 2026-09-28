@@ -97,17 +97,23 @@ h1 em { font-style: normal; color: var(--blue); }
 }
 .screen {
   position: relative; height: 100%; border-radius: 36px; overflow: hidden;
-  background:
-    radial-gradient(120% 70% at 50% 32%, rgba(255,255,255,.22), transparent 60%),
-    linear-gradient(170deg, #9DB4D6 0%, #6F87AE 38%, #3B3F52 72%, #1F1E24 100%);
+  background: #1F1E24 url(/img/creador.jpg) center 42% / cover no-repeat;
 }
-.screen::before { /* the person, suggested */
-  content: ""; position: absolute; left: 50%; bottom: -6%; transform: translateX(-50%);
-  width: 78%; aspect-ratio: 1 / 1.25; border-radius: 48% 48% 20% 20%;
-  background: radial-gradient(circle at 50% 28%, #2B2A2F 0 22%, transparent 23%),
-              radial-gradient(ellipse at 50% 100%, #111014 0 58%, transparent 59%);
-  opacity: .9;
+.screen::before { /* keeps the subtitles and the handle readable */
+  content: ""; position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(rgba(0,0,0,.28), transparent 18%, transparent 55%, rgba(0,0,0,.55));
 }
+.creator {
+  position: absolute; left: 16px; right: 16px; bottom: 22px; z-index: 2;
+  display: flex; align-items: center; gap: 9px; color: #fff; text-decoration: none;
+  font-weight: 700; font-size: 14px; text-shadow: 0 1px 3px rgba(0,0,0,.5);
+}
+.creator img { width: 30px; height: 30px; border-radius: 50%; object-fit: cover; object-position: center 38%; border: 2px solid #fff; }
+.creator small { display: block; font-weight: 500; font-size: 12px; opacity: .85; }
+.creator:hover { color: #fff; }
+.byline { margin-top: 10px; font-size: 14px; color: var(--muted); }
+.byline a { color: var(--secondary); font-weight: 700; text-decoration: none; }
+.byline a:hover { color: var(--blue); }
 .island { position: absolute; top: 12px; left: 50%; transform: translateX(-50%); width: 34%; height: 26px; border-radius: 20px; background: #000; z-index: 2; }
 .caption {
   position: absolute; left: 0; right: 0; bottom: 30%; z-index: 2;

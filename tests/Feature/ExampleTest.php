@@ -38,4 +38,9 @@ class ExampleTest extends TestCase
             ->assertSee('https://wa.me/528117425048?text=Hola%2C%20quiero%20probar%20Lote.', false)
             ->assertDontSee('subject=Quiero', false);
     }
+
+    public function test_hero_shows_the_creator(): void
+    {
+        $this->get('/')->assertSee('img/creador.jpg', false)->assertSee('@heeydzul');
+    }
 }
