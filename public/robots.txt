@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://applote.com/sitemap.xml
