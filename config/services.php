@@ -2,6 +2,11 @@
 
 return [
 
+    // Stock clips for the app ("videos de apoyo"). https://pixabay.com/api/docs/
+    'pixabay' => [
+        'key' => env('PIXABAY_KEY'),
+    ],
+
     /*
     |--------------------------------------------------------------------------
     | Third Party Services
