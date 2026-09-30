@@ -3,6 +3,17 @@
 return [
 
     // Stock clips for the app ("videos de apoyo"). https://pixabay.com/api/docs/
+    // "IA de Lote": Lote's own OpenAI key, used for Pro subscribers.
+    'openai' => [
+        'key' => env('OPENAI_KEY'),
+        'model' => env('OPENAI_MODEL', 'gpt-5-mini'),
+    ],
+
+    // Lets the developer's own (unsigned) builds use the AI without a receipt.
+    'lote' => [
+        'dev_token' => env('LOTE_AI_DEV_TOKEN'),
+    ],
+
     'pixabay' => [
         'key' => env('PIXABAY_KEY'),
     ],
