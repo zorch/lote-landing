@@ -1,0 +1,105 @@
+{
+  "version": 1,
+  "music": {
+    "soft": [
+      "music/soft-1.mp3",
+      "music/soft-2.mp3",
+      "music/soft-3.mp3",
+      "music/soft-4.mp3"
+    ],
+    "energy": [
+      "music/energy-1.mp3",
+      "music/energy-2.mp3",
+      "music/energy-3.mp3",
+      "music/energy-4.mp3"
+    ],
+    "reflective": [
+      "music/reflective-1.mp3",
+      "music/reflective-2.mp3",
+      "music/reflective-3.mp3",
+      "music/reflective-4.mp3"
+    ],
+    "inspiring": [
+      "music/inspiring-1.mp3",
+      "music/inspiring-2.mp3",
+      "music/inspiring-3.mp3",
+      "music/inspiring-4.mp3"
+    ],
+    "playful": [
+      "music/playful-1.mp3",
+      "music/playful-2.mp3",
+      "music/playful-3.mp3",
+      "music/playful-4.mp3"
+    ],
+    "tense": [
+      "music/tense-1.mp3",
+      "music/tense-2.mp3",
+      "music/tense-3.mp3",
+      "music/tense-4.mp3"
+    ],
+    "business": [
+      "music/business-1.mp3",
+      "music/business-2.mp3",
+      "music/business-3.mp3",
+      "music/business-4.mp3"
+    ],
+    "hype": [
+      "music/hype-1.mp3",
+      "music/hype-2.mp3",
+      "music/hype-3.mp3",
+      "music/hype-4.mp3"
+    ],
+    "chill": [
+      "music/chill-1.mp3",
+      "music/chill-2.mp3",
+      "music/chill-3.mp3",
+      "music/chill-4.mp3"
+    ],
+    "epic": [
+      "music/epic-1.mp3",
+      "music/epic-2.mp3",
+      "music/epic-3.mp3",
+      "music/epic-4.mp3"
+    ]
+  },
+  "sfx": {
+    "whoosh-1": "sfx/whoosh-1.mp3",
+    "whoosh-2": "sfx/whoosh-2.mp3",
+    "whoosh-3": "sfx/whoosh-3.mp3",
+    "pop-1": "sfx/pop-1.mp3",
+    "pop-2": "sfx/pop-2.mp3",
+    "click": "sfx/click.mp3",
+    "impact-1": "sfx/impact-1.mp3",
+    "boom": "sfx/boom.mp3",
+    "riser": "sfx/riser.mp3",
+    "glitch": "sfx/glitch.mp3",
+    "record-scratch": "sfx/record-scratch.mp3",
+    "cash-register": "sfx/cash-register.mp3",
+    "coins": "sfx/coins.mp3",
+    "money-count": "sfx/money-count.mp3",
+    "coin-single": "sfx/coin-single.mp3",
+    "ding-correct": "sfx/ding-correct.mp3",
+    "buzzer-wrong": "sfx/buzzer-wrong.mp3",
+    "fail": "sfx/fail.mp3",
+    "sparkle": "sfx/sparkle.mp3",
+    "heart": "sfx/heart.mp3",
+    "level-up": "sfx/level-up.mp3",
+    "notification": "sfx/notification.mp3",
+    "camera-shutter": "sfx/camera-shutter.mp3",
+    "typing": "sfx/typing.mp3",
+    "swoosh-up": "sfx/swoosh-up.mp3",
+    "swoosh-down": "sfx/swoosh-down.mp3",
+    "bass-drop": "sfx/bass-drop.mp3",
+    "crowd-wow": "sfx/crowd-wow.mp3",
+    "crowd-laugh": "sfx/crowd-laugh.mp3",
+    "applause": "sfx/applause.mp3",
+    "drumroll": "sfx/drumroll.mp3",
+    "tada": "sfx/tada.mp3",
+    "suspense-hit": "sfx/suspense-hit.mp3",
+    "tick": "sfx/tick.mp3",
+    "bell": "sfx/bell.mp3",
+    "phone-vibrate": "sfx/phone-vibrate.mp3",
+    "magic": "sfx/magic.mp3",
+    "slide": "sfx/slide.mp3"
+  }
+}
