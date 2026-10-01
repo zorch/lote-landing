@@ -126,10 +126,20 @@ def jobs():
             yield ("https://api.elevenlabs.io/v1/sound-generation?output_format=mp3_44100_128",
                    {"text": prompt, "duration_seconds": seconds, "prompt_influence": 0.6}, path)
 
+def normalize():
+    """Every track at the same loudness (-18 LUFS) in music/v2, so the apps' volume means the same for all."""
+    import subprocess
+    (ROOT / "music" / "v2").mkdir(exist_ok=True)
+    for source in sorted((ROOT / "music").glob("*.mp3")):
+        target = ROOT / "music" / "v2" / source.name
+        if not target.exists():
+            subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(source), "-af", "loudnorm=I=-18:TP=-2:LRA=11",
+                            "-ar", "44100", "-b:a", "160k", str(target)], check=True)
+
 def manifest():
-    music = {mood: [f"music/{mood}-{i}.mp3" for i in range(1, len(p) + 1) if (ROOT / "music" / f"{mood}-{i}.mp3").exists()] for mood, p in MUSIC.items()}
+    music = {mood: [f"music/v2/{mood}-{i}.mp3" for i in range(1, len(p) + 1) if (ROOT / "music" / "v2" / f"{mood}-{i}.mp3").exists()] for mood, p in MUSIC.items()}
     sfx = {name: f"sfx/{name}.mp3" for name, _, _ in SFX if (ROOT / "sfx" / f"{name}.mp3").exists()}
-    (ROOT / "manifest.json").write_text(json.dumps({"version": 1, "music": music, "sfx": sfx}, indent=2))
+    (ROOT / "manifest.json").write_text(json.dumps({"version": 2, "music": music, "sfx": sfx}, indent=2))
 
 if __name__ == "__main__":
     (ROOT / "music").mkdir(parents=True, exist_ok=True); (ROOT / "sfx").mkdir(parents=True, exist_ok=True)
@@ -139,5 +149,6 @@ if __name__ == "__main__":
     with ThreadPoolExecutor(max_workers=2) as pool:
         for line in pool.map(lambda job: post(*job), todo):
             print(line, flush=True)
+    normalize()
     manifest()
     print("manifest listo", flush=True)

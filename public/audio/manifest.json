@@ -1,65 +1,65 @@
 {
-  "version": 1,
+  "version": 2,
   "music": {
     "soft": [
-      "music/soft-1.mp3",
-      "music/soft-2.mp3",
-      "music/soft-3.mp3",
-      "music/soft-4.mp3"
+      "music/v2/soft-1.mp3",
+      "music/v2/soft-2.mp3",
+      "music/v2/soft-3.mp3",
+      "music/v2/soft-4.mp3"
     ],
     "energy": [
-      "music/energy-1.mp3",
-      "music/energy-2.mp3",
-      "music/energy-3.mp3",
-      "music/energy-4.mp3"
+      "music/v2/energy-1.mp3",
+      "music/v2/energy-2.mp3",
+      "music/v2/energy-3.mp3",
+      "music/v2/energy-4.mp3"
     ],
     "reflective": [
-      "music/reflective-1.mp3",
-      "music/reflective-2.mp3",
-      "music/reflective-3.mp3",
-      "music/reflective-4.mp3"
+      "music/v2/reflective-1.mp3",
+      "music/v2/reflective-2.mp3",
+      "music/v2/reflective-3.mp3",
+      "music/v2/reflective-4.mp3"
     ],
     "inspiring": [
-      "music/inspiring-1.mp3",
-      "music/inspiring-2.mp3",
-      "music/inspiring-3.mp3",
-      "music/inspiring-4.mp3"
+      "music/v2/inspiring-1.mp3",
+      "music/v2/inspiring-2.mp3",
+      "music/v2/inspiring-3.mp3",
+      "music/v2/inspiring-4.mp3"
     ],
     "playful": [
-      "music/playful-1.mp3",
-      "music/playful-2.mp3",
-      "music/playful-3.mp3",
-      "music/playful-4.mp3"
+      "music/v2/playful-1.mp3",
+      "music/v2/playful-2.mp3",
+      "music/v2/playful-3.mp3",
+      "music/v2/playful-4.mp3"
     ],
     "tense": [
-      "music/tense-1.mp3",
-      "music/tense-2.mp3",
-      "music/tense-3.mp3",
-      "music/tense-4.mp3"
+      "music/v2/tense-1.mp3",
+      "music/v2/tense-2.mp3",
+      "music/v2/tense-3.mp3",
+      "music/v2/tense-4.mp3"
     ],
     "business": [
-      "music/business-1.mp3",
-      "music/business-2.mp3",
-      "music/business-3.mp3",
-      "music/business-4.mp3"
+      "music/v2/business-1.mp3",
+      "music/v2/business-2.mp3",
+      "music/v2/business-3.mp3",
+      "music/v2/business-4.mp3"
     ],
     "hype": [
-      "music/hype-1.mp3",
-      "music/hype-2.mp3",
-      "music/hype-3.mp3",
-      "music/hype-4.mp3"
+      "music/v2/hype-1.mp3",
+      "music/v2/hype-2.mp3",
+      "music/v2/hype-3.mp3",
+      "music/v2/hype-4.mp3"
     ],
     "chill": [
-      "music/chill-1.mp3",
-      "music/chill-2.mp3",
-      "music/chill-3.mp3",
-      "music/chill-4.mp3"
+      "music/v2/chill-1.mp3",
+      "music/v2/chill-2.mp3",
+      "music/v2/chill-3.mp3",
+      "music/v2/chill-4.mp3"
     ],
     "epic": [
-      "music/epic-1.mp3",
-      "music/epic-2.mp3",
-      "music/epic-3.mp3",
-      "music/epic-4.mp3"
+      "music/v2/epic-1.mp3",
+      "music/v2/epic-2.mp3",
+      "music/v2/epic-3.mp3",
+      "music/v2/epic-4.mp3"
     ]
   },
   "sfx": {
