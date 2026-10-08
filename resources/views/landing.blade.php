@@ -115,7 +115,7 @@
           <div class="section-head">
             <div class="kicker">Privacidad</div>
             <h2>Tus videos no salen de tu dispositivo hasta que tú lo decides.</h2>
-            <p>Lote no tiene servidores propios. Todo el trabajo pesado pasa en tu iPhone o tu Mac.</p>
+            <p>Lote no guarda tus videos ni tus datos en servidores. Todo el trabajo pesado pasa en tu iPhone, iPad o Mac.</p>
           </div>
           <div class="privacy-list">
             <div><h3>Procesado en el dispositivo</h3><p>Recorte, transcripción y subtítulos corren en tu equipo, con su propio chip.</p></div>

@@ -3,7 +3,7 @@
 return [
     'name' => 'Lote',
     'tagline' => 'Graba tus videos. Lote hace lo demás.',
-    'description' => 'Lote toma los videos verticales que grabaste, les quita el silencio, les pone subtítulos, escribe su título y descripción, y los programa en Instagram, TikTok y YouTube con Metricool. Todo en tu iPhone o tu Mac.',
+    'description' => 'Lote toma los videos verticales que grabaste, les quita el silencio, les pone subtítulos, escribe su título y descripción, y los programa en Instagram, TikTok y YouTube con Metricool. Todo en tu iPhone, iPad o Mac.',
 
     // Shown on every page and used for "Pedir acceso".
     'email' => env('LANDING_EMAIL', 'jorge.dzul.escobar@gmail.com'),
@@ -14,5 +14,5 @@ return [
     'whatsapp_message' => 'Hola, quiero probar Lote.',
 
     // Date shown on the privacy notice and the terms.
-    'legal_updated' => '28 de septiembre de 2026',
+    'legal_updated' => '8 de octubre de 2026',
 ];
