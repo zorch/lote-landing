@@ -14,8 +14,10 @@ BED = "Instrumental, no vocals, mixed to sit under a person talking, steady ener
 DEEP_BED = ("Instrumental only, no vocals, no rain, no vinyl crackle, no noise textures. Rich, full-bodied, warm low end, "
             "real-sounding instruments with natural dynamics. Designed to sit under a person speaking to camera: "
             "no silences, no abrupt drops, natural ending.")
-# Seconds per mood; the batch accepts videos of up to 3 minutes, so a 3-minute track never has to loop.
-LENGTH = {"reflective": 180}  # inspiring-5/6 and soft-5/6 are also 180 s (moved from reflective)
+# Seconds per mood. New tracks are 2 minutes: most videos are ~1 minute, and the apps
+# cross-fade a repeat when a video is longer. The first reflective batch is 3 minutes.
+LENGTH = {"reflective": 180}
+DEFAULT_LENGTH = 120  # inspiring-5/6 and soft-5/6 are also 180 s (moved from reflective)
 
 # Mood ids match MusicGenerator.Mood in both apps.
 MUSIC = {
@@ -140,7 +142,7 @@ def jobs():
             if not path.exists():
                 bed = DEEP_BED if mood in LENGTH else BED
                 yield ("https://api.elevenlabs.io/v1/music?output_format=mp3_44100_128",
-                       {"prompt": f"{prompt} {bed}", "music_length_ms": LENGTH.get(mood, 90) * 1000, "force_instrumental": True}, path)
+                       {"prompt": f"{prompt} {bed}", "music_length_ms": LENGTH.get(mood, DEFAULT_LENGTH) * 1000, "force_instrumental": True}, path)
     for name, prompt, seconds in SFX:
         path = ROOT / "sfx" / f"{name}.mp3"
         if not path.exists():
