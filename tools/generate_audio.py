@@ -16,8 +16,8 @@ DEEP_BED = ("Instrumental only, no vocals, no rain, no vinyl crackle, no noise t
             "no silences, no abrupt drops, natural ending.")
 # Seconds per mood. New tracks are 2 minutes: most videos are ~1 minute, and the apps
 # cross-fade a repeat when a video is longer. The first reflective batch is 3 minutes.
-LENGTH = {"reflective": 180}
-DEFAULT_LENGTH = 120  # inspiring-5/6 and soft-5/6 are also 180 s (moved from reflective)
+LENGTH = {"reflective": 180}  # inspiring-5/6 and soft-5/6 are also 180 s (moved from reflective)
+DEFAULT_LENGTH = 120
 
 # Mood ids match MusicGenerator.Mood in both apps.
 MUSIC = {
