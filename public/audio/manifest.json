@@ -5,7 +5,9 @@
       "music/v2/soft-1.mp3",
       "music/v2/soft-2.mp3",
       "music/v2/soft-3.mp3",
-      "music/v2/soft-4.mp3"
+      "music/v2/soft-4.mp3",
+      "music/v2/soft-5.mp3",
+      "music/v2/soft-6.mp3"
     ],
     "energy": [
       "music/v2/energy-1.mp3",
@@ -17,13 +19,19 @@
       "music/v2/reflective-1.mp3",
       "music/v2/reflective-2.mp3",
       "music/v2/reflective-3.mp3",
-      "music/v2/reflective-4.mp3"
+      "music/v2/reflective-4.mp3",
+      "music/v2/reflective-5.mp3",
+      "music/v2/reflective-6.mp3",
+      "music/v2/reflective-7.mp3",
+      "music/v2/reflective-8.mp3"
     ],
     "inspiring": [
       "music/v2/inspiring-1.mp3",
       "music/v2/inspiring-2.mp3",
       "music/v2/inspiring-3.mp3",
-      "music/v2/inspiring-4.mp3"
+      "music/v2/inspiring-4.mp3",
+      "music/v2/inspiring-5.mp3",
+      "music/v2/inspiring-6.mp3"
     ],
     "playful": [
       "music/v2/playful-1.mp3",

@@ -10,25 +10,45 @@ from concurrent.futures import ThreadPoolExecutor
 ROOT = pathlib.Path(__file__).resolve().parent.parent / "public" / "audio"
 KEY = (pathlib.Path.home() / ".config/lote/elevenlabs.key").read_text().strip()
 BED = "Instrumental, no vocals, mixed to sit under a person talking, steady energy without big drops or silences, clean ending."
+# Richer bed for the deep moods: real instruments, body, natural dynamics, no noise textures.
+DEEP_BED = ("Instrumental only, no vocals, no rain, no vinyl crackle, no noise textures. Rich, full-bodied, warm low end, "
+            "real-sounding instruments with natural dynamics. Designed to sit under a person speaking to camera: "
+            "no silences, no abrupt drops, natural ending.")
+# Seconds per mood; the batch accepts videos of up to 3 minutes, so a 3-minute track never has to loop.
+LENGTH = {"reflective": 180}  # inspiring-5/6 and soft-5/6 are also 180 s (moved from reflective)
 
 # Mood ids match MusicGenerator.Mood in both apps.
 MUSIC = {
     "soft": ["Soft acoustic guitar and gentle piano, warm and calm, light brushed percussion",
              "Gentle ambient pads with soft piano notes, peaceful and clear",
              "Light acoustic folk with fingerpicked guitar and soft shaker",
-             "Warm minimal piano with subtle strings, intimate and calm"],
+             "Warm minimal piano with subtle strings, intimate and calm",
+                       "Warm vintage waltz in 3/4 at 100 BPM: pizzicato strings, clarinet melody, muted trumpet, piano and light brushes, swinging gently, major key with a bittersweet minor middle section. Charming, nostalgic, tender.",
+                       "Intimate fingerpicked acoustic guitar at 74 BPM with a bright capo tone, soft cello, gentle piano notes, folk ballad in a major key with a wistful vi chord (I–V–vi–IV), tiny brushed percussion. Tender, honest, hopeful.",
+              ],
     "energy": ["Upbeat pop with bright synths, claps and driving drums, exciting",
                "Energetic indie rock with punchy drums and electric guitar riffs",
                "Bright electro pop with bouncy bass and snappy percussion",
                "Fast funky groove with slap bass, brass stabs and tight drums"],
-    "reflective": ["Emotional piano with soft strings, thoughtful and tender",
-                   "Ambient cinematic textures with slow piano, introspective",
-                   "Acoustic guitar with warm cello, nostalgic and heartfelt",
-                   "Minimal felt piano with gentle pads, hopeful and reflective"],
+    # Original bases (chord loop, tempo, instruments, feel) in the spirit of the
+    # reflective songs that go viral on TikTok and Instagram. No song is copied.
+    "reflective": [
+        "Slow waltz in 6/8 at 72 BPM on a minor loop (i–VI–III–VII). Tremolo electric guitar drenched in spring reverb, upright bass, brushed snare, distant pedal steel swells and a ghostly choir pad. Nostalgic, heartbroken, cinematic.",
+        "Muted felt piano chords on a slow four-chord minor loop (vi–IV–I–V) at 80 BPM, soft synth pads, deep sub bass, light finger snaps, subtle string swells. Intimate, autumnal, bittersweet storytelling.",
+        "Dream pop ballad in 6/8 at 68 BPM: washed-out reverb guitars, slow drums with big room reverb, lush string section, major key with aching suspended chords (I–vi–IV–V). Overwhelming emotion, swelling bigger in the middle section while staying smooth.",
+        "Music-box glockenspiel and clean electric guitar arpeggio lullaby, slow 4/4 at 76 BPM, gentle bass and soft brushed drums, major key with melancholic minor turns (I–vi–IV–iv). Fragile, comforting, sad and sweet.",
+        "Dream pop at 72 BPM: slide guitar descending melody, vintage organ chords, warm fuzz bass, soft drum machine, long reverb tails, minor-leaning loop (i–VII–VI–VII). Floating, nostalgic, spacious.",
+        "Dark alternative ballad at 70 BPM: clean electric guitar arpeggio in a minor key (i–VI–III–VII), deep sub bass, sparse snare, soft pad, moody and vulnerable, with a little more emotion toward the end.",
+        "Lo-fi ambient piano at 60 BPM, slowed and reverb-washed, two alternating minor chords with a simple top-note melody, soft sub bass, no drums, clean and pure. Calm, lonely, introspective.",
+        "Solo grand piano, dramatic romantic ballad at 84 BPM, flowing minor-key arpeggios with a soaring right-hand melody, rubato swells and a light string pad underneath for depth. Deeply emotional, passionate, cinematic.",
+    ],
     "inspiring": ["Inspiring cinematic build with piano, strings and steady drums, hopeful",
                   "Uplifting corporate acoustic with claps and glockenspiel, positive",
                   "Motivational orchestral pop with big drums and piano, rising",
-                  "Hopeful indie with guitars, piano and soft driving beat"],
+                  "Hopeful indie with guitars, piano and soft driving beat",
+                       "Driving piano sixteenth-note arpeggios cycling three modal chords (I–v–ii), 130 BPM with a half-time feel, warm bass pulse, soft kick and a string pad rising under the piano. Hopeful urgency, emotional, builds gradually.",
+                       "Emotional cinematic build at 76 BPM: felt piano intro, strings enter, soft taiko and cello swell to a big heartfelt climax with full orchestra, then settle gently. Minor key (i–VI–III–VII). For moving, inspiring moments.",
+              ],
     "playful": ["Playful quirky ukulele with whistles, claps and pizzicato, fun",
                 "Bouncy comedic cartoon music with bassoon and pizzicato strings",
                 "Happy funky groove with marimba and claps, cheerful",
@@ -118,8 +138,9 @@ def jobs():
         for index, prompt in enumerate(prompts, 1):
             path = ROOT / "music" / f"{mood}-{index}.mp3"
             if not path.exists():
+                bed = DEEP_BED if mood in LENGTH else BED
                 yield ("https://api.elevenlabs.io/v1/music?output_format=mp3_44100_128",
-                       {"prompt": f"{prompt}. {BED}", "music_length_ms": 90000, "force_instrumental": True}, path)
+                       {"prompt": f"{prompt} {bed}", "music_length_ms": LENGTH.get(mood, 90) * 1000, "force_instrumental": True}, path)
     for name, prompt, seconds in SFX:
         path = ROOT / "sfx" / f"{name}.mp3"
         if not path.exists():
