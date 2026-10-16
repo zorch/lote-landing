@@ -11,8 +11,17 @@ class AITest extends TestCase
 {
     private function fakeOpenAI(): void
     {
-        config(['services.openai.key' => 'sk-test']);
+        config(['services.openai.key' => 'sk-test', 'services.anthropic.key' => null]);
         Http::fake(['api.openai.com/*' => Http::response(['choices' => [['message' => ['content' => '{"titulo":"Hola"}']]]])]);
+    }
+
+    private function fakeClaude(string $stopReason = 'end_turn'): void
+    {
+        config(['services.openai.key' => null, 'services.anthropic.key' => 'sk-ant-test', 'services.anthropic.model' => 'claude-opus-5-5']);
+        Http::fake(['api.anthropic.com/*' => Http::response([
+            'stop_reason' => $stopReason,
+            'content' => [['type' => 'text', 'text' => '{"scenes":[]}']],
+        ])]);
     }
 
     /** A verifier that accepts "good" and rejects everything else. */
@@ -48,6 +57,36 @@ class AITest extends TestCase
         $this->ask(['X-Lote-Receipt' => 'good'])->assertOk()->assertJsonPath('content', '{"titulo":"Hola"}')->assertDontSee('sk-test');
         Http::assertSent(fn ($request) => $request->hasHeader('Authorization', 'Bearer sk-test')
             && $request['response_format']['type'] === 'json_object');
+    }
+
+    public function test_claude_is_preferred_when_configured_and_follows_the_schema(): void
+    {
+        $this->fakeClaude();
+        $this->fakeReceipts();
+        $schema = ['type' => 'object', 'properties' => ['scenes' => ['type' => 'array']], 'required' => ['scenes'], 'additionalProperties' => false];
+        $this->withHeaders(['X-Lote-Receipt' => 'good'])
+            ->postJson('/api/ai/chat', ['system' => 'Anima', 'user' => 'Hola', 'json' => true, 'schema' => $schema])
+            ->assertOk()->assertJsonPath('content', '{"scenes":[]}')->assertDontSee('sk-ant-test');
+        Http::assertSent(fn ($request) => $request->hasHeader('x-api-key', 'sk-ant-test')
+            && $request['model'] === 'claude-opus-5-5'
+            && $request['fallbacks'] === 'default'
+            && $request['output_config']['format']['type'] === 'json_schema'
+            && $request['output_config']['format']['schema']['required'] === ['scenes']);
+    }
+
+    public function test_claude_without_schema_asks_for_json_in_the_instructions(): void
+    {
+        $this->fakeClaude();
+        $this->fakeReceipts();
+        $this->ask(['X-Lote-Receipt' => 'good'])->assertOk();
+        Http::assertSent(fn ($request) => str_contains($request['system'], 'JSON') && ! isset($request['output_config']['format']));
+    }
+
+    public function test_claude_refusal_is_reported_as_empty(): void
+    {
+        $this->fakeClaude('refusal');
+        $this->fakeReceipts();
+        $this->ask(['X-Lote-Receipt' => 'good'])->assertStatus(502);
     }
 
     public function test_without_receipt_it_asks_for_pro(): void

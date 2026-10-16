@@ -9,6 +9,13 @@ return [
         'model' => env('OPENAI_MODEL', 'gpt-5-mini'),
     ],
 
+    // When set, "IA de Lote" answers with Claude; OpenAI stays as the fallback.
+    'anthropic' => [
+        'key' => env('ANTHROPIC_KEY'),
+        'model' => env('ANTHROPIC_MODEL', 'claude-opus-5-5'),
+        'effort' => env('ANTHROPIC_EFFORT', 'low'),
+    ],
+
     // Lets the developer's own (unsigned) builds use the AI without a receipt.
     'lote' => [
         'dev_token' => env('LOTE_AI_DEV_TOKEN'),
