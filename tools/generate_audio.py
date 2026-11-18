@@ -27,11 +27,18 @@ MUSIC = {
              "Warm minimal piano with subtle strings, intimate and calm",
                        "Warm vintage waltz in 3/4 at 100 BPM: pizzicato strings, clarinet melody, muted trumpet, piano and light brushes, swinging gently, major key with a bittersweet minor middle section. Charming, nostalgic, tender.",
                        "Intimate fingerpicked acoustic guitar at 74 BPM with a bright capo tone, soft cello, gentle piano notes, folk ballad in a major key with a wistful vi chord (I–V–vi–IV), tiny brushed percussion. Tender, honest, hopeful.",
-              ],
+        # Nov 2026: originals in the genres trending on TikTok and Reels.
+        "Warm neo-soul lullaby at 78 BPM: Rhodes electric piano with gentle tremolo playing jazzy major seventh chords (Imaj7–iii7–IVmaj7–V7), round fingered bass guitar, soft brushed kit with rim clicks, a nylon guitar answering the piano with small melodic phrases, light vibraphone sparkles. Tender, cozy, a parent talking softly at bedtime.",
+        "Sunlit indie folk at 92 BPM: two fingerpicked acoustic guitars in open tuning, warm upright piano doubling the melody, soft kick on one and three, hand claps and tambourine that come in halfway, low cello pad, wordless hummed-style melody played on a mellow flugelhorn. Major key (I–IV–vi–V). Nostalgic home-video warmth, hopeful, family.",
+    ],
     "energy": ["Upbeat pop with bright synths, claps and driving drums, exciting",
                "Energetic indie rock with punchy drums and electric guitar riffs",
                "Bright electro pop with bouncy bass and snappy percussion",
-               "Fast funky groove with slap bass, brass stabs and tight drums"],
+               "Fast funky groove with slap bass, brass stabs and tight drums",
+        # Nov 2026: originals in the genres trending on TikTok and Reels.
+        "Latin urban pop at 96 BPM with a dembow-style drum groove: syncopated plucked nylon guitar riff, bright marimba-like synth plucks, deep round sub bass sliding between notes, crisp rimshots, shakers and timbales fills, airy pad in the chorus sections, minor key (i–VI–III–VII). Sunny, danceable, confident, modern radio polish.",
+        "Glossy dance-pop at 122 BPM: four-on-the-floor kick with tight claps, rubbery funk bass line, chopped rhythm guitar stabs, shimmering analog synth chords with sidechain pumping, sparkling arpeggio on top, big filtered build into each chorus section. Major key with a bittersweet vi chord. Bright, stylish, irresistible groove.",
+    ],
     # Original bases (chord loop, tempo, instruments, feel) in the spirit of the
     # reflective songs that go viral on TikTok and Instagram. No song is copied.
     "reflective": [
@@ -50,27 +57,48 @@ MUSIC = {
                   "Hopeful indie with guitars, piano and soft driving beat",
                        "Driving piano sixteenth-note arpeggios cycling three modal chords (I–v–ii), 130 BPM with a half-time feel, warm bass pulse, soft kick and a string pad rising under the piano. Hopeful urgency, emotional, builds gradually.",
                        "Emotional cinematic build at 76 BPM: felt piano intro, strings enter, soft taiko and cello swell to a big heartfelt climax with full orchestra, then settle gently. Minor key (i–VI–III–VII). For moving, inspiring moments.",
-              ],
+        # Nov 2026: originals in the genres trending on TikTok and Reels.
+        "Anthemic indie pop at 104 BPM: chiming delayed electric guitars, driving floor-tom groove with big claps, warm synth bass, piano octaves lifting the chorus, gang-style wordless chant melody played by layered synth brass, strings rising in the last third. Major key (IV–I–V–vi). Wide open, triumphant, golden hour, things are getting better.",
+        "Modern cinematic piano pop at 88 BPM: intimate felt piano motif that repeats and grows, warm analog pad, pulsing muted guitar eighth notes, deep soft kick, live strings joining in layers, gentle snare rolls into a full emotional lift, then a calm resolved ending. Major key with suspended chords. Heartfelt, encouraging, a lesson learned.",
+    ],
     "playful": ["Playful quirky ukulele with whistles, claps and pizzicato, fun",
                 "Bouncy comedic cartoon music with bassoon and pizzicato strings",
                 "Happy funky groove with marimba and claps, cheerful",
-                "Light quirky electronic with plucky synths and toy percussion"],
+                "Light quirky electronic with plucky synths and toy percussion",
+        # Nov 2026: originals in the genres trending on TikTok and Reels.
+        "Cheeky funk at 110 BPM led by a bold tenor saxophone riff that gets a little louder and more over-the-top every eight bars: tight clavinet, slap bass, dry punchy drums with cowbell, brass section stabs answering the sax, wah guitar scratches, comedic stop-time breaks that land right back on the groove. Mischievous, funny, confident.",
+    ],
     "tense": ["Suspenseful dark synths with ticking percussion and low drones",
               "Tense cinematic strings with pulsing bass, mysterious",
               "Dark minimal electronic with heartbeat kick and eerie pads",
-              "Investigative documentary tension with piano ostinato and low strings"],
+              "Investigative documentary tension with piano ostinato and low strings",
+        # Nov 2026: originals in the genres trending on TikTok and Reels.
+        "Melodic techno at 124 BPM in a dark minor key: rolling sixteenth-note bass arpeggio with slow filter movement, steady punchy kick, crisp offbeat hi-hats, cold evolving pad, a haunting three-note bell motif echoing with long delay, low string drone underneath, tension that keeps tightening without ever breaking. Serious, investigative, breaking news at night.",
+    ],
     "business": ["Modern corporate tech background with clean punchy drums, warm bass and plucked synths, confident",
                  "Smooth business hip hop beat with mellow keys and crisp drums, professional",
                  "Upbeat startup vibe with marimba, claps and light electronic beat, motivating",
-                 "Minimal confident electronic with deep bass and clean percussion, finance news style"],
+                 "Minimal confident electronic with deep bass and clean percussion, finance news style",
+        # Nov 2026: originals in the genres trending on TikTok and Reels.
+        "Sleek deep house at 118 BPM: warm round kick, soft shuffled hats, smooth Rhodes chord stabs with jazzy ninths, rubbery sub bass groove, muted guitar plucks, airy vocal-like pad without words, tasteful filter sweeps. Minor seventh loop (ii7–V7–Imaj7–vi7). Hypnotic, smooth, self-assured, modern newsroom and city at dusk.",
+        "Modern news-explainer beat at 100 BPM: tight boom-bap drums with crisp snare, warm upright bass line, staccato string ostinato, clean electric piano chords, subtle glassy synth pulse marking the eighth notes, short brass swells at phrase endings. Minor key, confident and forward-moving. Smart, credible, here is what happened today.",
+    ],
     "hype": ["High energy trap beat with heavy 808s and hi-hats, powerful",
              "Epic sports hype with big drums, distorted bass and synth stabs",
              "Energetic EDM build with driving four on the floor kick, exciting",
-             "Aggressive phonk style beat with cowbell and heavy bass"],
+             "Aggressive phonk style beat with cowbell and heavy bass",
+        # Nov 2026: originals in the genres trending on TikTok and Reels.
+        "Afro house at 122 BPM: deep kick with rolling log drums and layered congas, shakers and rim patterns, hypnotic marimba ostinato, wide warm sub bass, call-and-response synth brass stabs, rising filter builds into bigger percussion sections. Minor key. Powerful, tribal, euphoric, body-moving.",
+        "Club beat at 140 BPM with a bouncing triplet kick pattern: chopped syncopated percussion, bright bell lead playing a catchy four-bar hook, heavy gliding 808 bass, snappy claps on every beat in the build sections, pitched synth stabs, fast hi-hat rolls. Major-leaning, cheeky, viral dance challenge energy.",
+    ],
     "chill": ["Chill lo-fi hip hop with dusty drums, mellow electric piano and warm bass, relaxed",
               "Laid back tropical house with soft marimba and smooth groove",
               "Smooth jazzy chillhop with soft saxophone and brushed drums",
-              "Relaxed bossa nova with nylon guitar and light percussion"],
+              "Relaxed bossa nova with nylon guitar and light percussion",
+        # Nov 2026: originals in the genres trending on TikTok and Reels.
+        "Cozy coffee-shop soul at 84 BPM: warm Wurlitzer electric piano comping, laid-back pocket drums with soft ghost notes, melodic fingered bass, clean jazz guitar octaves carrying the tune, muted trumpet answering with short phrases, gentle Hammond organ swells. Major seventh loop (Imaj7–vi7–ii7–V7). Morning ritual, smooth, unhurried, feels like sunlight on a table.",
+        "Modern jazz quartet at 96 BPM in a gentle bossa-leaning groove: lyrical tenor saxophone melody with a breathy warm tone, clean hollow-body guitar chords and countermelody, upright bass walking softly, brushed drums with light ride cymbal. Mediterranean sunset mood, major key with a wistful minor turn. Elegant, relaxed, golden.",
+    ],
     "epic": ["Epic cinematic orchestral with huge drums and brass, powerful and grand",
              "Heroic trailer music with choir pads, strings and big percussion",
              "Dramatic emotional orchestral build with piano and strings",
@@ -140,7 +168,8 @@ def jobs():
         for index, prompt in enumerate(prompts, 1):
             path = ROOT / "music" / f"{mood}-{index}.mp3"
             if not path.exists():
-                bed = DEEP_BED if mood in LENGTH else BED
+                # The long, detailed prompts get the richer bed.
+                bed = DEEP_BED if mood in LENGTH or len(prompt) > 150 else BED
                 yield ("https://api.elevenlabs.io/v1/music?output_format=mp3_44100_128",
                        {"prompt": f"{prompt} {bed}", "music_length_ms": LENGTH.get(mood, DEFAULT_LENGTH) * 1000, "force_instrumental": True}, path)
     for name, prompt, seconds in SFX:
@@ -167,6 +196,8 @@ def manifest():
 if __name__ == "__main__":
     (ROOT / "music").mkdir(parents=True, exist_ok=True); (ROOT / "sfx").mkdir(parents=True, exist_ok=True)
     todo = list(jobs())
+    # An optional first argument limits how many are generated in this run.
+    if len(sys.argv) > 1: todo = todo[:int(sys.argv[1])]
     print(f"{len(todo)} por generar", flush=True)
     # The Creator plan allows 2 requests at a time.
     with ThreadPoolExecutor(max_workers=2) as pool:

@@ -7,13 +7,17 @@
       "music/v2/soft-3.mp3",
       "music/v2/soft-4.mp3",
       "music/v2/soft-5.mp3",
-      "music/v2/soft-6.mp3"
+      "music/v2/soft-6.mp3",
+      "music/v2/soft-7.mp3",
+      "music/v2/soft-8.mp3"
     ],
     "energy": [
       "music/v2/energy-1.mp3",
       "music/v2/energy-2.mp3",
       "music/v2/energy-3.mp3",
-      "music/v2/energy-4.mp3"
+      "music/v2/energy-4.mp3",
+      "music/v2/energy-5.mp3",
+      "music/v2/energy-6.mp3"
     ],
     "reflective": [
       "music/v2/reflective-1.mp3",
@@ -31,37 +35,47 @@
       "music/v2/inspiring-3.mp3",
       "music/v2/inspiring-4.mp3",
       "music/v2/inspiring-5.mp3",
-      "music/v2/inspiring-6.mp3"
+      "music/v2/inspiring-6.mp3",
+      "music/v2/inspiring-7.mp3",
+      "music/v2/inspiring-8.mp3"
     ],
     "playful": [
       "music/v2/playful-1.mp3",
       "music/v2/playful-2.mp3",
       "music/v2/playful-3.mp3",
-      "music/v2/playful-4.mp3"
+      "music/v2/playful-4.mp3",
+      "music/v2/playful-5.mp3"
     ],
     "tense": [
       "music/v2/tense-1.mp3",
       "music/v2/tense-2.mp3",
       "music/v2/tense-3.mp3",
-      "music/v2/tense-4.mp3"
+      "music/v2/tense-4.mp3",
+      "music/v2/tense-5.mp3"
     ],
     "business": [
       "music/v2/business-1.mp3",
       "music/v2/business-2.mp3",
       "music/v2/business-3.mp3",
-      "music/v2/business-4.mp3"
+      "music/v2/business-4.mp3",
+      "music/v2/business-5.mp3",
+      "music/v2/business-6.mp3"
     ],
     "hype": [
       "music/v2/hype-1.mp3",
       "music/v2/hype-2.mp3",
       "music/v2/hype-3.mp3",
-      "music/v2/hype-4.mp3"
+      "music/v2/hype-4.mp3",
+      "music/v2/hype-5.mp3",
+      "music/v2/hype-6.mp3"
     ],
     "chill": [
       "music/v2/chill-1.mp3",
       "music/v2/chill-2.mp3",
       "music/v2/chill-3.mp3",
-      "music/v2/chill-4.mp3"
+      "music/v2/chill-4.mp3",
+      "music/v2/chill-5.mp3",
+      "music/v2/chill-6.mp3"
     ],
     "epic": [
       "music/v2/epic-1.mp3",
